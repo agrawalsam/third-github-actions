@@ -1,7 +1,5 @@
 name: Second WorkFlow
-on:
-  issues:
-    types: [opened]
+on: issues
 jobs:
   info:
     runs-on:  ubuntu-latest
