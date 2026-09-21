@@ -1,0 +1,24 @@
+name: First WorkFlow 
+on: push
+jobs:
+  firstworkflow:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Get code
+        uses: actions/checkout@v7
+      
+      - name: Install Dependencies
+        run: npm ci
+      
+      - name: linting
+        run: npm run lint 
+      
+      - name: testing 
+        run: npm test
+      
+      - name: build
+        run: npm run build 
+      
+      - name: deploy
+        run: echo "Deploying"

@@ -1,0 +1,13 @@
+name: Second WorkFlow
+on:
+  issues:
+    types: [opened]
+jobs:
+  info:
+    runs-on:  ubuntu-latest
+    steps:
+      - name: Print Issue Details. 
+        run: |
+          echo "Action: ${{ github.event.action }}"
+          echo "Issue Title: ${{ github.event.issue.title }}"
+          echo "Issue Number: ${{ github.event.issue.number }}"
